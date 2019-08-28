@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {%extends 'base.html'%}
 
 {%block content%}
@@ -28,7 +29,7 @@
         {%else%}
         <div class="col-md-6">
             <h3 class="animated fadeIn">{{word}} Photos <i class="fas fa-info"></i></h3>
-            <h5 id="high">{{images|length}} Photos </h5>
+            <h5 id-unique="high">{{images|length}} Photos </h5>
             <strong>
                 <p>We are Sorry! No Pictures found!</p>
             </strong>
@@ -89,9 +90,9 @@
 
                         </div>
                         <div style="text-align:center" class="modal-footer">
-                            <div><i id='hide'>https://galleria.herokuapp.com{{image.image.url}}</i><a id="{{image.id}}"
+                            <div><i id="hide">https://galleria.herokuapp.com{{image.image.url}}</i><a id="{{image.id}}"
                                     value="{{image.image.url}}" tabindex="0" data-trigger="focus" data-placement="top"
-                                    type="button" data-toggle='popover' data-content="Copied"
+                                    type="button" data-toggle="popover" data-content="Copied"
                                     class="btn btn-primary btn-sm" onclick="status(this)"> <i class="fas fa-copy"> Copy
                                         link</i></a></div>
                             <a target="_blank" href="https://facebook.com/"><button type="button"
