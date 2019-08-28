@@ -8,12 +8,13 @@ def home(request):
     message='My Photo Gallery'
     try:
         images=Image.get_images()
+        print(images)
 
     except Exception as e:
         raise  Http404()
 
     locations=Location.get_location()
-    return render(request,"index.html",{'message':message,'images':images,'locations':locations})
+    return render(request,"index.html",locals())
 
 def location(request,locate_id):
 
