@@ -17,33 +17,36 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('Category', models.CharField(max_length=30)),
             ],
         ),
         migrations.CreateModel(
             name='Image',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=60)),
                 ('decription', models.CharField(max_length=200)),
                 ('image', models.ImageField(blank=True, upload_to='galleria/')),
                 ('upload_time', models.DateTimeField(auto_now_add=True)),
-                ('categ', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ImageStudio.Category')),
+                ('categ', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='ImageStudio.Category')),
             ],
         ),
         migrations.CreateModel(
             name='Location',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('location', models.CharField(max_length=30)),
             ],
         ),
         migrations.AddField(
             model_name='image',
             name='locate',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ImageStudio.Location'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to='ImageStudio.Location'),
         ),
     ]
-
-    
