@@ -1,0 +1,35 @@
+{% load bootstrap4 %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Image Studio</title>
+    {%block styles%}
+    {%bootstrap_css%}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'css/mdb.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="icon" href="">
+    {%endblock%}
+</head>
+
+<body>
+    {%block content%}
+    {%include 'navbar.html'%}
+    {%endblock%}
+
+    {%block scripts%}
+    <script type="text/javascript" src="{%static  'js/jquery-3.3.1.min.js'%}"></script>
+    <script type="text/javascript" src="{%static  'js/mdb.min.js'%}"></script>
+    <script type="text/javascript" src="{%static  'js/popper.min.js'%}"></script>
+    <script type="text/javascript" src="{%static  'js/bootstrap.js'%}"></script>
+    <script type="text/javascript" src="{%static  'js/main.js'%}"></script>
+    {%endblock%}
+
+</body>
+
+</html>

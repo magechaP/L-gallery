@@ -1,0 +1,51 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Galleria</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Categories</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    {%for local in categories%}
+                    <a class="dropdown-item" href="/category/{{category.id}}">{{local.category}}</a>
+                    {%endfor%}
+                </div>
+
+            </li>
+
+        </ul>
+        <!-- Links -->
+
+        <form id="form" action="{%url 'search'%}" class="form-inline my-2 my-lg-0">
+            <input id="search" required class="form-control mr-sm-2" type="search" name="Category" placeholder="Search"
+                aria-label="Search">
+            <button id="clickSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+
+
+    </div>
+    <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
