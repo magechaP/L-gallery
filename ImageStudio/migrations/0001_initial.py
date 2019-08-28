@@ -45,3 +45,5 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ImageStudio.Location'),
         ),
     ]
+
+    
