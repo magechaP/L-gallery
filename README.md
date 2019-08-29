@@ -1,6 +1,6 @@
 # L-GALLERY
 #### A python application based on Django framework, 2019
-####  **[Ian Kurao](https://github.com/magecchaP)**
+####  **[Peter Magecha](https://github.com/magecchaP)**
 ## Description
 This is a personal gallery application that enables me to post images for other users to see. A user can click on an image to view it's details and search in my application for images based on categories.
 ## Setup/Installation Requirements
